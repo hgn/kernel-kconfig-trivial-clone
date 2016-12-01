@@ -1,11 +1,22 @@
-[
-	{
-		"feature" : "foo",
-		"description" : "foo feature"
-	},
-	{
-		"feature" : "bar",
-		"description" : "bar feature",
-		"depends-on" : [ "foo" ]
-	}
-]
+{
+    "feature-catalogue": [
+        {
+            "feature" : "foo",
+            "description" : "foo feature"
+        },
+        {
+            "feature" : "bar",
+            "description" : "bar feature",
+            "depends-on" : [ "foo" ]
+        },
+        {
+            "feature" : "bax",
+            "description" : "bax feature"
+        }
+    ],
+
+    "predefined-feature-sets" : {
+        "spec-a" : [ "foo" ],
+        "spec-b" : [ "foo", "bax" ]
+    }
+}

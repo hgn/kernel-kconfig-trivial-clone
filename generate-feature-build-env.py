@@ -9,9 +9,14 @@ import datetime
 import argparse
 import pprint
 
+CONFIG_NAME = "build.config"
+
 
 def main():
     conf = conf_init()
+    print("At the end of the process a config file is generated: {}".format(CONFIG_NAME))
+    print("this file is sourced at the build process! Save it, distribute it, archive it")
+    print("\'{}\' is not modified in any way by the build process, just THIS tool will generate it".format(CONFIG_NAME))
 
 
 def load_configuration_file(args):
