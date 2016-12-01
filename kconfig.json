@@ -1,0 +1,11 @@
+[
+	{
+		"feature" : "foo",
+		"description" : "foo feature"
+	},
+	{
+		"feature" : "bar",
+		"description" : "bar feature",
+		"depends-on" : [ "foo" ]
+	}
+]
