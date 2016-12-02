@@ -1,6 +1,11 @@
 {
     "feature-catalogue": [
         {
+            "feature" : "arch",
+            "description" : "architecuture feature",
+            "provide-one-required" : [ "X86", "ARM" ].
+        },
+        {
             "feature" : "foo",
             "description" : "foo feature"
         },
