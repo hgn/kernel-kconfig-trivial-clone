@@ -2,26 +2,31 @@
     "feature-catalogue": [
         {
             "feature" : "arch",
-            "description" : "architecuture feature",
-            "provide-one-required" : [ "X86", "ARM" ].
+            "description" : "architecture feature",
+			"type" : "str-list",
+            "provide-one-required" : [ "x86", "arm" ].
         },
         {
             "feature" : "foo",
-            "description" : "foo feature"
+			"type" : "bool",
+            "description" : "foo feature, enabled or not enabled"
         },
         {
             "feature" : "bar",
-            "description" : "bar feature",
-            "depends-on" : [ "foo" ]
+			"type" : "bool",
+            "description" : "bar feature can only be enabled if foo is enabled, if enabled it will also enable foo",
+            "selects" : [ "foo" ]
         },
         {
-            "feature" : "bax",
+            "feature" : "fooval",
+			"type" : "int",
+			"type-range-inclusive": [ 2, 10 ],
             "description" : "bax feature"
         }
     ],
 
     "predefined-feature-sets" : {
-        "spec-a" : [ "foo" ],
+        "spec-a" : [ {"arch" : "x86" }, { "foo" : "enable" }, { "foovar" : "1" } ],
         "spec-b" : [ "foo", "bax" ]
     }
 }
